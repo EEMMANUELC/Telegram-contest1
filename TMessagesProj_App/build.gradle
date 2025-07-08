@@ -23,17 +23,12 @@ dependencies {
 
 android {
     compileSdkVersion 34
-    buildToolsVersion '34.0.0'
+    buildToolsVersion '35.0.0'
 
     defaultConfig.applicationId = APP_PACKAGE
 
     sourceSets.main.jniLibs.srcDirs = ['../TMessagesProj/jni/']
 
-    lintOptions {
-        disable 'MissingTranslation'
-        disable 'ExtraTranslation'
-        disable 'BlockedPrivateApi'
-    }
 
     dexOptions {
         jumboMode = true
@@ -173,7 +168,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 34
         versionName APP_VERSION_NAME
         ndkVersion "21.4.7075529"
@@ -194,10 +189,11 @@ android {
         buildConfig = true
     }
     namespace 'org.telegram.messenger.regular'
-
-    lintOptions {
+    lint {
         checkReleaseBuilds false
+        disable 'MissingTranslation', 'ExtraTranslation', 'BlockedPrivateApi'
     }
+
 }
 
 apply plugin: 'com.google.gms.google-services'

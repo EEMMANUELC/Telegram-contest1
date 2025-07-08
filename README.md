@@ -18,10 +18,7 @@ There are several things we require from **all developers** for the moment.
 
 Telegram API manuals: https://core.telegram.org/api
 
-MTproto protocol manuals: https://core.telegram.org/mtproto
-
-### Compilation Guide
-
+MTp~~
 **Note**: In order to support [reproducible builds](https://core.telegram.org/reproducible-builds), this repo contains dummy release.keystore,  google-services.json and filled variables inside BuildVars.java. Before publishing your own APKs please make sure to replace all these files with your own.
 
 You will require Android Studio 3.4, Android NDK rev. 20 and Android SDK 8.1
